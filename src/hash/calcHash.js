@@ -1,9 +1,8 @@
 import fs from "fs";
 import { createHash } from "crypto";
 
-const fileToCalculatePath = "src/hash/files/fileToCalculateHashFor.txt";
-
 const calculateHash = async () => {
+  const fileToCalculatePath = "src/hash/files/fileToCalculateHashFor.txt";
   const readableStream = fs.createReadStream(fileToCalculatePath);
 
   readableStream.on("data", function (chunk) {

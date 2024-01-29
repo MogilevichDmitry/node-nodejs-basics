@@ -1,8 +1,8 @@
 import fs from "fs";
 
-const fileToReadPath = "src/fs/files/fileToRead.txt";
-
 const read = async () => {
+  const fileToReadPath = "src/fs/files/fileToRead.txt";
+
   if (!fs.existsSync(fileToReadPath)) {
     throw new Error("FS operation failed!");
   }

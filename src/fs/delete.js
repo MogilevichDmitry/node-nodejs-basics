@@ -1,8 +1,8 @@
 import fs from "fs";
 
-const fileToRemovePath = "src/fs/files/fileToRemove.txt";
-
 const remove = async () => {
+  const fileToRemovePath = "src/fs/files/fileToRemove.txt";
+
   if (!fs.existsSync(fileToRemovePath)) {
     throw new Error("FS operation failed!");
   }

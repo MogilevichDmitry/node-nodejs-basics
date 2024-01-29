@@ -1,8 +1,8 @@
 import fs from "fs";
 
-const filesPath = "src/fs/files";
-
 const list = async () => {
+  const filesPath = "src/fs/files";
+
   if (!fs.existsSync(filesPath)) {
     throw new Error("FS operation failed!");
   }

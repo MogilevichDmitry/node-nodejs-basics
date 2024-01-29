@@ -1,8 +1,8 @@
 import fs from "fs";
 
-const filePath = "src/fs/files/fresh.txt";
-
 const create = async () => {
+  const filePath = "src/fs/files/fresh.txt";
+
   if (fs.existsSync(filePath)) {
     throw new Error("FS operation failed!");
   }
