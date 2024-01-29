@@ -10,7 +10,7 @@ const read = async () => {
   fs.readFile(fileToReadPath, "utf8", (err, data) => {
     if (err) throw err;
 
-    console.log(`File content:\n${data}`);
+    console.log(data);
   });
 };
 
