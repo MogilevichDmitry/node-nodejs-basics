@@ -1,5 +1,20 @@
+import fs from "fs";
+
 const copy = async () => {
-    // Write your code here 
+  const originalFilesPath = "src/fs/files";
+  const newFilesPath = "src/fs/files_copy";
+
+  if (!fs.existsSync(originalFilesPath) || fs.existsSync(newFilesPath)) {
+    throw new Error("FS operation failed!");
+  }
+
+  fs.cp(originalFilesPath, newFilesPath, { recursive: true }, (err) => {
+    if (err) throw err;
+  });
 };
 
-await copy();
+try {
+  await copy();
+} catch (err) {
+  console.error(err.message);
+}
